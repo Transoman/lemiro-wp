@@ -4,7 +4,8 @@ global.jQuery = require('jquery');
 let svg4everybody = require('svg4everybody'),
   popup = require('jquery-popup-overlay'),
   Swiper = require('swiper'),
-  fancybox = require('@fancyapps/fancybox');
+  fancybox = require('@fancyapps/fancybox'),
+  simpleParallax = require('simple-parallax-js');
 
 jQuery(document).ready(function($) {
   // Toggle nav menu
@@ -231,6 +232,8 @@ jQuery(document).ready(function($) {
       scrollTop: offsetTop + headerHeight
     }, 1000);
   });
+
+  new simpleParallax('.district__img');
 
   fixedHeader($(this));
 
