@@ -1,0 +1,27 @@
+.language-chooser
+  margin: 0
+  padding: 0
+  list-style: none
+  display: flex
+  align-items: center
+  li
+    display: flex
+    align-items: center
+    justify-content: center
+    width: 45px
+    height: 45px
+    margin-right: 1px
+    border: 1px solid transparent
+    border-radius: 50%
+    &:last-child
+      margin-right: 0
+    &.active
+      border-color: $accent
+      a
+
+        color: $dark
+  a
+    font-weight: 600
+    color: #B6B6B6
+    &:hover
+      color: $dark

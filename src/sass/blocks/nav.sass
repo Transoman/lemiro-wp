@@ -1,0 +1,120 @@
+.nav
+  +r(1200)
+    position: fixed
+    top: 0
+    right: 0
+    z-index: 10
+    display: flex
+    flex-direction: column
+    width: 320px
+    height: 100%
+    padding: 60px 20px 30px
+    background-color: #fff
+    box-shadow: 0 0 10px rgba(#000, 0.1)
+    overflow-y: auto
+    transform: translateX(150%)
+    +smooth-scroll
+    +trans
+    &.open
+      transform: translateX(0)
+  .language-chooser
+    display: none
+    margin-top: auto
+    justify-content: center
+    +r(1200)
+      display: flex
+
+.nav-list
+  margin: 0
+  padding: 0
+  list-style: none
+  display: flex
+  align-items: center
+  +r(1200)
+    display: block
+    margin-bottom: 20px
+  li
+    margin-right: 65px
+    +r(1499)
+      margin-right: 35px
+    +r(1200)
+      margin-right: 0
+      margin-bottom: 10px
+    &:last-child
+      margin-right: 0
+      +r(1200)
+        margin-bottom: 0
+  a
+    font-size: 18px
+    +r(1499)
+      font-size: 16px
+
+
+.nav-toggle
+  display: none
+  position: absolute
+  right: 15px
+  top: 50%
+  transform: translateY(-50%)
+  width: 28px
+  height: 15px
+  padding: 0
+  margin: 0
+  outline: none
+  border: none
+  background: none
+  z-index: 101
+  cursor: pointer
+  +r(1200)
+    display: block
+  &:focus
+    outline: none
+  &__line
+    position: relative
+    display: block
+    height: 2px
+    width: 100%
+    background: $accent
+    +trans
+    &::after, &::before
+      content: ''
+      position: absolute
+      left: 0
+      display: block
+      height: 2px
+      width: 100%
+      background: $accent
+      +trans
+    &::before
+      top: -6px
+    &::after
+      top: 6px
+  &.active
+    position: fixed
+    top: 20px
+    right: 20px
+    transform: none
+    .nav-toggle__line
+      background: transparent
+      &::after
+        top: 0
+        transform: rotate(45deg)
+      &::before
+        top: 0
+        transform: rotate(-45deg)
+
+.nav-overlay
+  +r(1200)
+    position: fixed
+    top: 0
+    right: 0
+    bottom: 0
+    left: 0
+    z-index: 9
+    background-color: rgba(#000, 0.8)
+    opacity: 0
+    visibility: hidden
+    +trans
+    &.is-active
+      opacity: 1
+      visibility: visible

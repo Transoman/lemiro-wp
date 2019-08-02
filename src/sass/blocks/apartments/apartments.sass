@@ -1,0 +1,128 @@
+.apartments
+  padding-top: 130px
+  padding-bottom: 150px
+  +r(767)
+    padding: 50px 0
+  .section-title
+    margin-bottom: 30px
+    +r(767)
+      margin-bottom: 20px
+  &__slider
+    &-wrap
+      position: relative
+      z-index: 1
+      margin-top: -220px
+      padding: 130px 100px 110px
+      background-color: #F9F4EA
+      +r(1200)
+        padding: 100px 70px 80px
+      +r(992)
+        margin-top: 0
+      +r(767)
+        padding: 50px
+      +r(576)
+        padding: 30px 15px
+      &::before
+        content: ''
+        position: absolute
+        top: 55px
+        right: 30px
+        z-index: -1
+        width: 485px
+        height: 435px
+        background: url(images/general/line-blue.svg) no-repeat center / contain
+        +r(1200)
+          width: 365px
+          height: 335px
+        +r(576)
+          display: none
+      &::after
+        content: ''
+        position: absolute
+        bottom: 80px
+        right: 60px
+        z-index: -1
+        width: 120px
+        height: 190px
+        background: url(images/general/line-green.svg) no-repeat center / contain
+        +r(1200)
+          width: 70px
+          height: 110px
+          right: 40px
+        +r(992)
+          right: 130px
+        +r(767)
+          right: 30px
+        +r(576)
+          bottom: 40px
+    &-title
+      margin-bottom: 0
+    &-top
+      position: relative
+      display: flex
+      align-items: center
+      margin-bottom: 40px
+      padding-right: 80px
+      +r(576)
+        margin-bottom: 20px
+    &-controls
+      position: absolute
+      right: 0
+      display: flex
+      align-items: center
+      justify-content: flex-end
+      flex-grow: 1
+      margin-left: auto
+      .swiper-button-prev,
+      .swiper-button-next
+        position: static
+        width: 30px
+        height: 30px
+        border: 1px solid rgba(30, 29, 29, 0.25)
+        margin: 0
+        &:hover
+          border-color: $accent
+          svg
+            fill: $accent
+        svg
+          width: 9px
+          height: 10px
+          fill: rgba(#1E1D1D, 0.25)
+      .swiper-button-prev
+        left: auto
+        margin-right: 10px
+      .swiper-button-next
+        right: auto
+  &__content
+    padding: 0 70px
+    font-size: 18px
+    +r(1200)
+      padding-left: 0
+    +r(992)
+      margin-bottom: 50px
+      padding: 0
+    +r(767)
+      text-align: center
+      font-size: 16px
+    p
+      &:last-of-type
+        margin-bottom: 0
+    .btn
+      margin-top: 70px
+      +r(767)
+        margin-top: 30px
+
+.apartments-slider
+  &__link
+    display: block
+    margin-bottom: 40px
+    +r(992)
+      text-align: center
+    +r(576)
+      margin-bottom: 20px
+  &__label
+    margin: 0 0 0 30px
+    font-size: 18px
+    font-weight: 700
+    letter-spacing: 0.05em
+    color: rgba(0, 0, 0, 0.35)

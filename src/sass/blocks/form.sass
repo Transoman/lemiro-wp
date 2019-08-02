@@ -1,0 +1,76 @@
+.form-group
+  position: relative
+  margin-bottom: 20px
+.form-field
+  width: 100%
+  padding: 22px 30px
+  background: #F9F4EA
+  border: 1px solid #F9F4EA
+  font-size: 16px
+  font-weight: 600
+  color: #8c8b8b
+  box-shadow: none
+  appearance: none
+  border-radius: 0
+  +trans
+  +r(767)
+    padding: 15px 20px
+    font-size: 14px
+  &::placeholder
+    color: inherit
+  &:focus
+    outline: none
+  &.wpcf7-not-valid
+    border-color: tomato
+
+textarea.form-field
+  height: 120px
+
+input[type="checkbox"]
+  @extend .visually-hidden
+  &:checked + span::after
+    opacity: 1
+    width: 51px
+  & + span
+    position: relative
+    display: block
+    padding-left: 65px
+    font-size: 16px
+    color: #8C8B8B
+    cursor: pointer
+    &::before
+      content: ''
+      position: absolute
+      top: -7px
+      left: 0
+      width: 35px
+      height: 35px
+      border: 1px solid rgba(140, 139, 139, 0.35)
+    &::after
+      content: ''
+      position: absolute
+      left: -3px
+      top: -21px
+      width: 0
+      height: 45px
+      background: url(images/general/check.png) no-repeat left center
+      +trans
+      opacity: 0
+    a
+      color: inherit
+      text-decoration: underline
+      &:hover, &:focus
+        color: $accent
+
+span.wpcf7-not-valid-tip
+  display: none
+
+//div.wpcf7-response-output
+//  position: fixed
+//  top: 50%
+//  transform: translateY(-50%)
+//  right: 0
+//  z-index: 5
+//  width: 400px
+//  margin: 0
+//  background-color: #fff

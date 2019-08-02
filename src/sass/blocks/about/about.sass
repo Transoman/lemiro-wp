@@ -1,0 +1,66 @@
+.about
+  padding-top: 250px
+  padding-bottom: 230px
+  +r(1200)
+    padding-bottom: 100px
+  +r(992)
+    padding-top: 100px
+  +r(767)
+    padding-top: 50px
+    padding-bottom: 50px
+    background-color: #F9F4EA
+  &::before
+    content: ''
+    position: absolute
+    top: 100px
+    left: 50%
+    transform: translateX(-50%)
+    z-index: -1
+    width: 770px
+    height: 895px
+    background-color: #F9F4EA
+    +r(992)
+      top: 50px
+    +r(767)
+      display: none
+  &__content
+    padding-top: 50px
+    +r(992)
+      padding-top: 20px
+    +r(767)
+      text-align: center
+    .btn
+      margin-top: 45px
+      margin-left: 70px
+      +r(992)
+        margin-left: 0
+      +r(576)
+        margin-top: 30px
+  &__descr
+    padding-left: 70px
+    font-size: 18px
+    +r(992)
+      padding-left: 0
+    +r(767)
+      font-size: 16px
+    p
+      &:last-child
+        margin-bottom: 0
+  &__imgs
+    position: relative
+    padding-right: 70px
+    +r(992)
+      padding-bottom: 50px
+    +r(767)
+      padding-right: 30px
+  &__img-2
+    position: absolute
+    bottom: -230px
+    right: 0
+    max-width: 300px
+    +r(992)
+      bottom: 0
+    +r(767)
+      width: 200px
+    +r(480)
+      width: 150px

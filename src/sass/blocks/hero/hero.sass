@@ -1,0 +1,64 @@
+.hero
+  +r(767)
+    padding-bottom: 50px
+  .container
+    +rmin(1499)
+      max-width: 1550px
+  &__content
+    padding-top: 150px
+    +r(1200)
+      padding-top: 110px
+    +r(992)
+      padding-top: 60px
+      text-align: center
+  &__title
+    margin-bottom: 110px
+    text-transform: uppercase
+    line-height: 1.1
+    +r(1200)
+      margin-bottom: 70px
+    +r(992)
+      margin-bottom: 50px
+    +r(992)
+      margin-bottom: 30px
+    span
+      display: block
+      font-size: 80px
+      text-transform: none
+      +r(1499)
+        font-size: 65px
+      +r(1200)
+        font-size: 50px
+      +r(992)
+        font-size: 40px
+      +r(992)
+        font-size: 24px
+  &__img
+    max-width: none
+    +r(1200)
+      width: 650px
+    +r(992)
+      display: none
+  &__descr
+    max-width: 330px
+    margin-left: 245px
+    font-size: 24px
+    +r(1200)
+      margin-left: 80px
+    +r(992)
+      max-width: none
+      margin-left: 0
+    +r(576)
+      font-size: 18px
+    p
+      &:last-child
+        margin-bottom: 0
+  .scroll-down
+    margin-left: 245px
+    margin-top: 85px
+    +r(1200)
+      margin-top: 55px
+      margin-left: 80px
+    +r(992)
+      display: inline-block
+      margin: 50px 0 0 0

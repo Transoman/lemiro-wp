@@ -1,0 +1,107 @@
+.contact
+  z-index: 1
+  padding-top: 200px
+  margin-bottom: -340px
+  +r(992)
+    margin-bottom: -200px
+  +r(767)
+    margin-bottom: 0
+    padding-top: 70px
+    background-color: #fff
+  &::before
+    content: ''
+    position: absolute
+    bottom: 0
+    left: 50%
+    z-index: -1
+    transform: translateX(-50%)
+    width: 91%
+    height: 100%
+    background-color: #fff
+    +r(767)
+      display: none
+  .section-title
+    margin-bottom: 80px
+    font-size: 48px
+    +r(767)
+      margin-bottom: 20px
+      font-size: 38px
+    +r(576)
+      font-size: 23px
+  &__col
+    position: relative
+    z-index: 1
+    line-height: 2
+    font-size: 20px
+    +r(992)
+      margin-bottom: 30px
+    &::before
+      content: ''
+      position: absolute
+      z-index: -1
+      width: 84px
+      height: 74px
+      background: url(images/general/shape-contact-1.png) no-repeat center
+      +r(767)
+        display: none
+    a
+      color: $main-color
+      &:hover, &:focus
+        color: $accent
+    &--address
+      padding-left: 70px
+      +r(767)
+        padding-left: 0
+      &::before
+        left: 15px
+        top: -20px
+    &--phone
+      padding-left: 70px
+      +r(767)
+        padding-left: 0
+      &::before
+        left: 40px
+        top: 20px
+        width: 61px
+        height: 71px
+        background-image: url(images/general/shape-contact-2.png)
+        +r(992)
+          left: 15px
+    &--social
+      padding-left: 30px
+      +r(992)
+        padding-left: 70px
+      +r(767)
+        padding-left: 0
+      &::before
+        left: 125px
+        top: -30px
+        width: 67px
+        height: 79px
+        background-image: url(images/general/shape-contact-3.png)
+  &__form-wrap
+    position: relative
+    z-index: 1
+    margin-top: 65px
+    padding: 0 40px 80px
+    +r(767)
+      margin-top: 30px
+      padding: 0 0 40px
+
+    form
+      .row
+        +rmin(768)
+          margin: 0 -30px
+      .col-lg-4, .col-lg-8
+        +rmin(768)
+          padding: 0 30px
+      .form-group
+        margin-bottom: 40px
+        +r(992)
+          margin-bottom: 20px
+          &--btn
+            margin-bottom: 40px
+        &--accept
+          margin-bottom: 0
+          +r(992)
+            margin-bottom: 0

@@ -1,0 +1,45 @@
+@import 'language-chooser'
+@import 'parallax'
+@import 'slider'
+
+.scroll-down
+  display: flex
+  align-items: center
+  color: #164399
+  background: none
+  border: none
+  +trans
+  &:hover, &:focus
+    color: lighten(#164399, 15%)
+    outline: none
+  svg
+    width: 16px
+    height: 24px
+    fill: #164399
+    margin-right: 20px
+
+.block-content
+  padding-top: 130px
+  +r(767)
+    padding-top: 50px
+  .section-title
+    margin-bottom: 30px
+    +r(767)
+      margin-bottom: 20px
+
+.description
+  font-size: 18px
+  +r(767)
+    font-size: 16px
+    text-align: center
+  p
+    &:last-of-type
+      margin-bottom: 0
+  .btn
+    margin-top: 45px
+    +r(767)
+      margin-top: 30px
+  &--right
+    padding-left: 70px
+    +r(992)
+      padding-left: 0
