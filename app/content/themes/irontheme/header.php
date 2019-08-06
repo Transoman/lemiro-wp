@@ -1,5 +1,5 @@
 <!doctype html>
-<html <?php language_attributes(); ?>>
+<html <?php language_attributes(); ?> class="animation">
 <head>
   <meta charset="<?php bloginfo( 'charset' ); ?>">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -9,10 +9,52 @@
   <!--[if lt IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
   <![endif]-->
+
+  <style>
+    html.animation {
+      overflow: hidden;
+    }
+    .preloader {
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 200;
+      background-color: #fff;
+      overflow: hidden;
+      transition: opacity 1s ease;
+    }
+
+    .preloader.end-animation {
+      opacity: 0;
+      pointer-events: none;
+    }
+  </style>
   <?php wp_head(); ?>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.5.7/lottie_light.min.js"></script>
 </head>
 
 <body <?php body_class(); ?>>
+
+<div class="preloader" data-path="<?php echo THEME_URL; ?>/js/data.json"></div>
+<script>
+  var anim = lottie.loadAnimation({
+    container: document.querySelector('.preloader'),
+    renderer: 'svg',
+    loop: true,
+    autoplay: true,
+    path: document.querySelector('.preloader').getAttribute('data-path')
+  });
+
+  window.addEventListener('load', function() {
+    anim.addEventListener('loopComplete', function() {
+      document.querySelector('html').classList.remove('animation');
+      document.querySelector('.preloader').classList.add('end-animation');
+      lottie.destroy();
+    });
+  });
+</script>
 
 <div class="wrapper">
   <header class="header">

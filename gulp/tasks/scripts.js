@@ -33,8 +33,11 @@ module.exports = function () {
   });
 
   $.gulp.task('js:copy', () => {
-    return $.gulp.src([scriptsPATH.input + '/*.js',
-      '!' + scriptsPATH.input + 'common.js'])
+    return $.gulp.src([
+      scriptsPATH.input + '/*.js',
+      scriptsPATH.input + '/*.json',
+      '!' + scriptsPATH.input + 'common.js'
+    ])
       .pipe(gp.plumber())
       .pipe($.gulp.dest(scriptsPATH.ouput))
       .pipe($.browserSync.reload({

@@ -8,6 +8,7 @@ let svg4everybody = require('svg4everybody'),
   simpleParallax = require('simple-parallax-js');
 
 jQuery(document).ready(function($) {
+
   // Toggle nav menu
   $('.nav-toggle').on('click', function (e) {
     e.preventDefault();
@@ -102,11 +103,17 @@ jQuery(document).ready(function($) {
 
     // var
     var latlng = new google.maps.LatLng( $marker.attr('data-lat'), $marker.attr('data-lng') );
+    var image = {
+      url: window.wp_data.theme_url + '/images/general/pin.png',
+      size: new google.maps.Size(94, 87),
+      anchor: new google.maps.Point(47, 87)
+    };
 
     // create marker
     var marker = new google.maps.Marker({
-      position	: latlng,
-      map			: map
+      position: latlng,
+      map: map,
+      icon: image,
     });
 
     // add to array
