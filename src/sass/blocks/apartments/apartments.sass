@@ -7,7 +7,7 @@
     margin-bottom: 30px
     +r(767)
       margin-bottom: 20px
-  &__slider
+  &__img
     &-wrap
       position: relative
       z-index: 1
@@ -56,43 +56,9 @@
         +r(576)
           bottom: 40px
     &-title
-      margin-bottom: 0
-    &-top
-      position: relative
-      display: flex
-      align-items: center
       margin-bottom: 40px
-      padding-right: 80px
       +r(576)
         margin-bottom: 20px
-    &-controls
-      position: absolute
-      right: 0
-      display: flex
-      align-items: center
-      justify-content: flex-end
-      flex-grow: 1
-      margin-left: auto
-      .swiper-button-prev,
-      .swiper-button-next
-        position: static
-        width: 30px
-        height: 30px
-        border: 1px solid rgba(30, 29, 29, 0.25)
-        margin: 0
-        &:hover
-          border-color: $accent
-          svg
-            fill: $accent
-        svg
-          width: 9px
-          height: 10px
-          fill: rgba(#1E1D1D, 0.25)
-      .swiper-button-prev
-        left: auto
-        margin-right: 10px
-      .swiper-button-next
-        right: auto
   &__content
     padding: 0 70px
     font-size: 18px

@@ -119,36 +119,15 @@ get_header(); ?>
               </div>
             </div>
             <div class="col-lg-6">
-              <?php $slider_title = get_sub_field('slider_title'); ?>
-              <?php if (have_rows('slider')): ?>
-                <div class="apartments__slider-wrap">
-                  <div class="apartments__slider-top">
-                    <h3 class="apartments__slider-title"><?php echo $slider_title; ?></h3>
-                    <div class="apartments__slider-controls">
-                      <div class="swiper-button-prev">
-                        <?php ith_the_icon('arrow-left-small'); ?>
-                      </div>
-                      <div class="swiper-button-next">
-                        <?php ith_the_icon('arrow-right-small'); ?>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="apartments-slider swiper-container">
-                    <div class="swiper-wrapper">
-                      <?php while (have_rows('slider')): the_row(); ?>
-                        <div class="apartments-slider__item swiper-slide">
-                          <a href="<?php echo wp_get_attachment_image_url(get_sub_field('image'), 'full'); ?>" data-fancybox="group" class="apartments-slider__link">
-                            <?php echo wp_get_attachment_image(get_sub_field('image'), 'apartments-slider'); ?>
-                          </a>
+              <div class="apartments__img-wrap">
+                <h3 class="apartments__img-title"><?php the_sub_field('img_title'); ?></h3>
 
-                          <p class="apartments-slider__label"><?php the_sub_field('value'); ?></p>
-
-                        </div>
-                      <?php endwhile; ?>
-                    </div>
-                  </div>
-                </div>
-              <?php endif; ?>
+                <?php if (get_sub_field('img')): ?>
+                  <a href="<?php echo wp_get_attachment_image_url(get_sub_field('img'), 'full')?>" class="apartments__img" data-fancybox>
+                    <?php echo wp_get_attachment_image(get_sub_field('img'), 'large'); ?>
+                  </a>
+                <?php endif; ?>
+              </div>
             </div>
           </div>
         </div>
